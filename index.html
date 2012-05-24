@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="style/jquery.mobile-1.0.css" />
     <link rel="stylesheet" href="style/style.css" />
 
-    <!-- The Templates -->
+
+
+  <!-- The Templates -->
      <script type="text/template" id="listItemTemplate">    
         <li>
           <a href="#update/<%= todo_id %>" data-id="<%= todo_id %>"><%= name %></a>
@@ -19,7 +21,10 @@
             <a href="/#add" data-role="button" data-icon="add">Add</a>
             <h1>StackMob</h1>
         </div>
-        <div data-role="content"></div>
+
+        <div data-role="content">
+
+        </div>
 
     </script>
 
@@ -29,10 +34,11 @@
             <a href="#" data-icon="back" class="back ui-btn-left">Back</a>
             <h1>Add</h1>
         </div>
+
         <div data-role="content">
             <form name="addForm" id="addForm">
-                <input type="text" name="name" id="name" value="surfing">
-                <input type="button" id="addBtn" value="save">
+                <input type="text" name="name" id="name" value="apples">
+                <input type="button" id="addBtn" value="add">
             </form>
         </div>
 
@@ -44,6 +50,7 @@
             <a href="#" data-icon="back" class="back ui-btn-left">Back</a>
             <h1>Update</h1>
         </div>
+
         <div data-role="content">
             <form name="updateForm" id="updateForm">
                 <input type="text" name="name" id="name" value="<%=  name %>">
@@ -53,6 +60,40 @@
         </div>
 
     </script>
+
+     <script type="text/template" id="page1">
+
+        <div data-role="header">
+            <a href="#" data-icon="back" class="back ui-btn-left">Back</a>
+            <h1>Page 1</h1>
+        </div>
+
+        <div data-role="content">
+            <form name="addForm" id="addForm">
+            </form>
+        </div>
+    </script>
+
+
+    <script type="text/template" id="page2">
+
+        <div data-role="header">
+            <a href="#" data-icon="back" class="back ui-btn-left">Back</a>
+            <h1>Page 2</h1>
+        </div>
+
+        <div data-role="content">
+            <p>This is Page 2. It was created dynamically using an underscore.js template.</p>
+            <p>Navigate to:</p>
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#">Home</a></li>
+                <li><a href="#page1">Page 1</a></li>
+            </ul>
+        </div>
+
+    </script>
+
+
 
     <script src="js/vendor/jquery-1.6.4.min.js"></script>
 
@@ -84,5 +125,7 @@
     <!-- maximum scale added to stop zoom on select controls -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
   </head>
-  <body></body>
+  <body>
+
+  </body>
 </html>
