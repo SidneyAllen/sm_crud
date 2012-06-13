@@ -1,7 +1,7 @@
 var myapp = {};
 
   StackMob.init({
-    appName: "sm_crud",
+    appName: "todo",
     clientSubdomain: "stackmob339",
     apiVersion: 0
   });
@@ -156,26 +156,6 @@ var myapp = {};
 
     });
 
-
-  myapp.Page1View = Backbone.View.extend({
-
-      template:_.template($('#page1').html()),
-
-      render:function (eventName) {
-          $(this.el).html(this.template());
-          return this;
-      }
-  });
-
-  myapp.Page2View = Backbone.View.extend({
-
-      template:_.template($('#page2').html()),
-
-      render:function (eventName) {
-          $(this.el).html(this.template());
-          return this;
-      }
-  });
 
   myapp.AppRouter = Backbone.Router.extend({
 

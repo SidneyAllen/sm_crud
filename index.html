@@ -1,56 +1,46 @@
 <!DOCTYPE html> 
 <html>
   <head>
-    <title>StackMob - CRUD</title>
-    
-    <link rel="stylesheet" href="style/jquery.mobile-1.0.css" />
-    <link rel="stylesheet" href="style/style.css" />
+    <title>StackMob - ToDo</title>
+ 
 
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+ 
 
-
-  <!-- The Templates -->
-     <script type="text/template" id="listItemTemplate">    
+    <!-- templates -->
+    <script type="text/template" id="listItemTemplate">    
         <li>
           <a href="#update/<%= todo_id %>" data-id="<%= todo_id %>"><%= name %></a>
         </li>
     </script>
 
+
     <script type="text/template" id="home">
-
         <div data-role="header">
-            <a href="/#add" data-role="button" data-icon="add">Add</a>
-            <h1>StackMob</h1>
+            <a href="#add" data-role="button" data-icon="add">Add</a>
+            <h1>StackMob ToDo</h1>
         </div>
-
-        <div data-role="content">
-
-        </div>
-
+        <div data-role="content"></div>
     </script>
 
     <script type="text/template" id="add">
-
         <div data-role="header">
             <a href="#" data-icon="back" class="back ui-btn-left">Back</a>
-            <h1>Add</h1>
+            <h1>Add ToDo</h1>
         </div>
-
         <div data-role="content">
             <form name="addForm" id="addForm">
-                <input type="text" name="name" id="name" value="apples">
+                <input type="text" name="name" id="name" placeholder="new tod" value="">
                 <input type="button" id="addBtn" value="add">
             </form>
         </div>
-
     </script>
 
     <script type="text/template" id="update">
-
         <div data-role="header">
             <a href="#" data-icon="back" class="back ui-btn-left">Back</a>
-            <h1>Update</h1>
+            <h1>Update ToDo</h1>
         </div>
-
         <div data-role="content">
             <form name="updateForm" id="updateForm">
                 <input type="text" name="name" id="name" value="<%=  name %>">
@@ -58,44 +48,9 @@
                 <input type="button" id="deleteBtn" value="delete">
             </form>
         </div>
-
     </script>
 
-     <script type="text/template" id="page1">
-
-        <div data-role="header">
-            <a href="#" data-icon="back" class="back ui-btn-left">Back</a>
-            <h1>Page 1</h1>
-        </div>
-
-        <div data-role="content">
-            <form name="addForm" id="addForm">
-            </form>
-        </div>
-    </script>
-
-
-    <script type="text/template" id="page2">
-
-        <div data-role="header">
-            <a href="#" data-icon="back" class="back ui-btn-left">Back</a>
-            <h1>Page 2</h1>
-        </div>
-
-        <div data-role="content">
-            <p>This is Page 2. It was created dynamically using an underscore.js template.</p>
-            <p>Navigate to:</p>
-            <ul data-role="listview" data-inset="true">
-                <li><a href="#">Home</a></li>
-                <li><a href="#page1">Page 1</a></li>
-            </ul>
-        </div>
-
-    </script>
-
-
-
-    <script src="js/vendor/jquery-1.6.4.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 
     <script type="text/javascript">
       $(document).bind("mobileinit", function(){
@@ -112,7 +67,7 @@
       });
     </script>
 
-    <script src="js/vendor/jquery.mobile-1.0.min.js"></script>
+     <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 
     <script type="text/javascript" src="http://static.stackmob.com/js/json2-min.js"></script>
     <script type="text/javascript" src="http://static.stackmob.com/js/underscore-1.3.0-min.js"></script>
