@@ -1,8 +1,15 @@
 var myapp = {};
-
+/*
   StackMob.init({
     appName: "todo",
     clientSubdomain: "stackmob339",
+    apiVersion: 0
+  });
+*/
+  StackMob.init({
+    appName: "sm_crud",
+    clientSubdomain: "stackmob339",
+    publicKey: "41ffdad6-4a9d-449b-aa2b-bf11e7f3e29b",
     apiVersion: 0
   });
 
