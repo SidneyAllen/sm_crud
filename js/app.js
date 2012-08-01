@@ -213,8 +213,8 @@ var myapp = {};
   });
 
   myapp.initData = function(){
-       // myapp.todos = new myapp.Todos();
-       // myapp.todos.fetch({async: false});
+        myapp.todos = new myapp.Todos();
+        myapp.todos.fetch({async: false});
   };
 
 }(jQuery));
